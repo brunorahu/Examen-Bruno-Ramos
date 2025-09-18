@@ -4,6 +4,7 @@ class FigurasGeometricas:
         self.altura = 0
         self.lado1 = 0
         self.lado2 = 0
+        self.radio = 0
 
     def validar_numero(self, mensaje):
         while True:
@@ -26,11 +27,18 @@ class FigurasGeometricas:
         self.lado1 = self.validar_numero("Ingrese el primer lado (base): ")
         self.lado2 = self.validar_numero("Ingrese el segundo lado (altura): ")
 
+    def datos_circulo(self):
+        print("\n--- Cálculo área de un Rectángulo ---")
+        self.radio = self.validar_numero("Ingrese el radio del círculo: ")
+
     def area_triangulo(self):
         return (self.base * self.altura) / 2
 
     def area_rectangulo(self):
         return self.lado1 * self.lado2
+    
+    def area_circulo(self):
+        return (self.radio * self.radio) * 3.141592
 
     def mostrar_resultados(self):
         print("\nResultados obtenidos:")
@@ -38,3 +46,5 @@ class FigurasGeometricas:
             print(f"Área del triángulo: {self.area_triangulo():.2f}")
         if self.lado1 and self.lado2:
             print(f"Área del rectángulo: {self.area_rectangulo():.2f}")
+        if self.readio:
+            print(f"Área del círculo: {self.area_circulo():.2f}")

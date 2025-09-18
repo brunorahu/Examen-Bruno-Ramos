@@ -8,9 +8,10 @@ def main():
         print("\nSeleccione la figura que desea calcular:")
         print("1. Triángulo")
         print("2. Rectángulo")
-        print("3. Salir")
+        print("3. Círculo")        
+        print("4. Salir")
 
-        opcion = input("Ingrese su opción (1-3): ")
+        opcion = input("Ingrese su opción (1-4): ")
 
         if opcion == "1":
             figura.datos_triangulo()
@@ -19,9 +20,12 @@ def main():
             figura.datos_rectangulo()
             print(f"Área del rectángulo: {figura.area_rectangulo():.2f}")
         elif opcion == "3":
+            figura.datos_circulo()
+            print(f"Área del rectángulo: {figura.area_circulo():.2f}")
+        elif opcion == "4":
             print("Saliendo del programa. ¡Hasta luego!")
             break
         else:
-            print("Sintaxis incorrecta: Ingrese su opción (1-3). Intente de nuevo.")
+            print("Sintaxis incorrecta: Ingrese su opción (1-4). Intente de nuevo.")
 
 main()
